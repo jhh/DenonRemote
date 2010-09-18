@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F43FB541240295A00CE339B /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F43FB531240295A00CE339B /* AsyncSocket.m */; };
 		1F62F325123071660008CD42 /* DenonRemote.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1F62F324123071660008CD42 /* DenonRemote.icns */; };
 		1F62F3311230732F0008CD42 /* DREvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32A1230732F0008CD42 /* DREvent.m */; };
 		1F62F3321230732F0008CD42 /* DRSession+Commands.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32C1230732F0008CD42 /* DRSession+Commands.m */; };
 		1F62F3331230732F0008CD42 /* DRSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32E1230732F0008CD42 /* DRSession.m */; };
-		1F62F3341230732F0008CD42 /* NSStream+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F3301230732F0008CD42 /* NSStream+Additions.m */; };
 		1FA613C01232A6F400A08A5B /* DRInputSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA613BF1232A6F400A08A5B /* DRInputSource.m */; };
 		1FEF92E112306F730069D6BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEF92E012306F730069D6BE /* Cocoa.framework */; };
 		1FEF92E612306F730069D6BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF92E412306F730069D6BE /* InfoPlist.strings */; };
@@ -22,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F43FB521240295A00CE339B /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		1F43FB531240295A00CE339B /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
 		1F62F324123071660008CD42 /* DenonRemote.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DenonRemote.icns; sourceTree = "<group>"; };
 		1F62F3281230732F0008CD42 /* DRDebuggingMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRDebuggingMacros.h; sourceTree = "<group>"; };
 		1F62F3291230732F0008CD42 /* DREvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DREvent.h; sourceTree = "<group>"; };
@@ -30,8 +32,6 @@
 		1F62F32C1230732F0008CD42 /* DRSession+Commands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DRSession+Commands.m"; sourceTree = "<group>"; };
 		1F62F32D1230732F0008CD42 /* DRSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSession.h; sourceTree = "<group>"; };
 		1F62F32E1230732F0008CD42 /* DRSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSession.m; sourceTree = "<group>"; };
-		1F62F32F1230732F0008CD42 /* NSStream+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+Additions.h"; sourceTree = "<group>"; };
-		1F62F3301230732F0008CD42 /* NSStream+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStream+Additions.m"; sourceTree = "<group>"; };
 		1FA613BE1232A6F400A08A5B /* DRInputSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRInputSource.h; sourceTree = "<group>"; };
 		1FA613BF1232A6F400A08A5B /* DRInputSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRInputSource.m; sourceTree = "<group>"; };
 		1FEF92DD12306F730069D6BE /* Denon Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Denon Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +61,8 @@
 		1F62F3271230732F0008CD42 /* DenonRemoteLib */ = {
 			isa = PBXGroup;
 			children = (
+				1F43FB521240295A00CE339B /* AsyncSocket.h */,
+				1F43FB531240295A00CE339B /* AsyncSocket.m */,
 				1F62F3281230732F0008CD42 /* DRDebuggingMacros.h */,
 				1F62F3291230732F0008CD42 /* DREvent.h */,
 				1F62F32A1230732F0008CD42 /* DREvent.m */,
@@ -68,8 +70,6 @@
 				1F62F32C1230732F0008CD42 /* DRSession+Commands.m */,
 				1F62F32D1230732F0008CD42 /* DRSession.h */,
 				1F62F32E1230732F0008CD42 /* DRSession.m */,
-				1F62F32F1230732F0008CD42 /* NSStream+Additions.h */,
-				1F62F3301230732F0008CD42 /* NSStream+Additions.m */,
 				1FA613BE1232A6F400A08A5B /* DRInputSource.h */,
 				1FA613BF1232A6F400A08A5B /* DRInputSource.m */,
 			);
@@ -204,8 +204,8 @@
 				1F62F3311230732F0008CD42 /* DREvent.m in Sources */,
 				1F62F3321230732F0008CD42 /* DRSession+Commands.m in Sources */,
 				1F62F3331230732F0008CD42 /* DRSession.m in Sources */,
-				1F62F3341230732F0008CD42 /* NSStream+Additions.m in Sources */,
 				1FA613C01232A6F400A08A5B /* DRInputSource.m in Sources */,
+				1F43FB541240295A00CE339B /* AsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

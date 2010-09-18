@@ -85,6 +85,7 @@ extern NSString * const DRSatelliteInputSource;
 
 - (void) applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.initializing = YES;
+    _waitingForMasterVolumeEvent = NO;
     float delay = 0.0;
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -159,6 +160,8 @@ extern NSString * const DRSatelliteInputSource;
             break;
         case DenonMasterVolumeEvent:
             self.masterVolumeDb = [event floatValue];
+            // increment/decrement a no-op until previous volume command responds
+            _waitingForMasterVolumeEvent = NO;
             break;
         case DenonMasterVolumeMaxEvent:
             break;
@@ -244,19 +247,35 @@ extern NSString * const DRSatelliteInputSource;
 }
 
 - (IBAction) incrementMasterVolume:(id)sender {
+    // don't increment past the maximum possible volume
     if (self.masterVolumeDb >= 18.0) {
         self.masterVolumeDb = 18.0;
         return;
     }
-    [self.session sendMasterVolume:self.masterVolumeDb+=1.0];
+
+    // don't send another command to increment volume if we have a previous
+    // volume command pending, prevents the slider from jumping backwards
+    // when holding down keyboard shortcut
+    if (!_waitingForMasterVolumeEvent) {
+        [self.session sendMasterVolume:self.masterVolumeDb+=2.0];
+        _waitingForMasterVolumeEvent = YES;
+    }
 }
 
 - (IBAction) decrementMasterVolume:(id)sender {
+    // don't decrement below the minimum possible volume
     if (self.masterVolumeDb <= -80.0) {
         self.masterVolumeDb = -80.0;
         return;
     }
-    [self.session sendMasterVolume:self.masterVolumeDb-=1.0];    
+
+    // don't send another command to decrement volume if we have a previous
+    // volume command pending, prevents the slider from jumping backwards
+    // when holding down keyboard shortcut
+    if (!_waitingForMasterVolumeEvent) {
+        [self.session sendMasterVolume:self.masterVolumeDb-=2.0];
+        _waitingForMasterVolumeEvent = YES;
+    }
 }
 
 @end

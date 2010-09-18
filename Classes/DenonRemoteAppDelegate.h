@@ -24,6 +24,7 @@
     BOOL             _initializing;
     BOOL             _active;
     BOOL             _mute;
+    BOOL             _waitingForMasterVolumeEvent;
     NSMutableArray * _inputSources;
     NSArray *        _inputSourceNames;
     NSUInteger       _selectedInputSourceIndex;

@@ -16,6 +16,7 @@
 // limitations under the License.
 
 #import "DenonRemoteAppDelegate.h"
+#import "PreferencesWindowController.h"
 
 #import "DRSession+Commands.h"
 #import "DREvent.h"
@@ -23,9 +24,6 @@
 #import "DRDebuggingMacros.h"
 
 #define NUM_4308CI_SOURCES 14
-
-NSString * const DRReceiverAddressKey = @"ReceiverAddress";
-//NSString * const DRInputSourcesKey    = @"InputSources";
 
 @interface DenonRemoteAppDelegate () <NSApplicationDelegate, DRSessionDelegate>
 
@@ -36,10 +34,13 @@ NSString * const DRReceiverAddressKey = @"ReceiverAddress";
 @property (nonatomic, copy,   readwrite) NSArray * inputSourceNames;
 
 // private properties
-@property (nonatomic, readwrite) DRSession * session;
+@property (nonatomic, assign, readwrite) DRSession * session;
 @property (nonatomic, assign, readwrite) NSMutableArray * inputSources;
 
 // forward declarations
+- (void) disconnectIfConnected;
+- (void) connect;
+- (void) queryMain;
 
 @end
 
@@ -55,27 +56,17 @@ extern NSString * const DRNetUSBInputSource;
 extern NSString * const DRDVDInputSource;
 extern NSString * const DRSatelliteInputSource;
 
-+ (void)initialize {
-    NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
-    [defaultValues setValue:@"0.0.0.0" forKey:DRReceiverAddressKey];
-    
-//    NSMutableDictionary *sources = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-//                                    DRHDPInputSource, DRHDPInputSource,
-//                                    DRTVCableInputSource, DRTVCableInputSource,
-//                                    DRHDRadioInputSource, DRHDRadioInputSource,
-//                                    DRNetUSBInputSource, DRNetUSBInputSource,
-//                                    DRDVDInputSource, DRDVDInputSource,
-//                                    DRSatelliteInputSource, DRSatelliteInputSource,
-//                                    nil];
-
-//    [defaultValues setValue:sources forKey:DRInputSourcesKey];
-    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
++ (void) initialize {
+    NSDictionary * defaults = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]];
+    [[NSUserDefaults standardUserDefaults] registerDefaults: defaults];
 }
 
-- (id)init {
+- (id) init {
     if ((self = [super init])) {
-//        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        _defaults = [NSUserDefaults standardUserDefaults];
+        _volumeIncrement = [_defaults floatForKey:@"VolumeIncrement"];
         self.inputSources = [NSMutableArray arrayWithCapacity:15];
+        _preferencesWindowController = [[PreferencesWindowController alloc] init];
     }
     return self;
 }
@@ -84,65 +75,92 @@ extern NSString * const DRSatelliteInputSource;
 #pragma mark Application delegate callbacks
 
 - (void) applicationDidFinishLaunching:(NSNotification *)aNotification {
-    self.initializing = YES;
-    _waitingForMasterVolumeEvent = NO;
-    float delay = 0.0;
-
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-    self.session = [[DRSession alloc]
-                    initWithHostName:[defaults objectForKey:DRReceiverAddressKey]];
-    [self.session setDelegate:self];
-
-    [self.session performSelector:@selector(queryInputSourceNames)
-                       withObject:nil afterDelay:delay];
-    [self.session performSelector:@selector(queryInputSourceUsage)
-                       withObject:nil afterDelay:delay+=1.0];
-    DLog(@"delay=%g", delay);
-    [self.session performSelector:@selector(queryInputSource) withObject:nil afterDelay:delay+=1.0];
-    DLog(@"delay=%g", delay);
-    [self.session performSelector:@selector(queryStandby) withObject:nil afterDelay:delay+=0.2];
-    DLog(@"delay=%g", delay);
-    [self.session performSelector:@selector(queryMute) withObject:nil afterDelay:delay+=0.2];
-    DLog(@"delay=%g", delay);
-    [self.session performSelector:@selector(queryMasterVolume) withObject:nil afterDelay:delay+=0.2];
-    DLog(@"delay=%g", delay);
+//    [[NSApp mainMenu] addItem:[[FScriptMenuItem alloc] init]];
+    [self connect];
+    [self queryMain];
 }
+
 
 - (void) applicationWillTerminate:(NSNotification *)sender {
     [self.session close];
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    [defaults setValue:@"10.0.1.2" forKey:DRReceiverAddressKey];
-//    [defaults setValue:self.inputSources forKey:DRInputSourcesKey];
 }
+
+
+#pragma mark -
+#pragma mark Private methods
+
+
+- (void) disconnectIfConnected {
+    if (self.session) {
+        DLog(@"Session (%@) exists, closing before reopening", self.session);
+        [self.session close];
+        self.session = nil;
+    }
+}
+
+
+- (void) connect {
+    self.session = [[DRSession alloc]
+                    initWithHostName:[_defaults valueForKey:@"ReceiverAddress"]];
+    self.session.delegate = self;
+    DLog(@"self = %@; session = %@; delegate = %@", self, self.session, self.session.delegate);
+    _waitingForMasterVolumeEvent = NO;
+}
+
+
+- (void) queryMain {
+
+    // series of commands are sent from this method - schedule each command on run loop
+    // with delays between each to allow receiver to respond.
+    float sd = [_defaults floatForKey:@"CommandSendDelay"];
+    float lsd = sd * 5.0; // long send delay
+    float delay = 0.0; // accumulated delay
+
+    // turn on initializing spinner while querying status
+    self.initializing = YES;
+
+    // populate input source drop down
+    [self.session performSelector:@selector(queryInputSourceNames)
+                       withObject:nil afterDelay:delay];
+
+    // this command returns list of deleted/used input sources as series of events
+    // keep track of events received to turn off spinner and enable input
+    // source drop down
+    // long delay - multiple events returned from previous queryInputSourceNames
+    _inputSourceUsageCount = 0;
+    [self.session performSelector:@selector(queryInputSourceUsage)
+                       withObject:nil afterDelay:delay+=lsd];
+
+    // long delay - multiple events returned from previous queryInputSourceUsage
+    [self.session performSelector:@selector(queryInputSource) withObject:nil afterDelay:delay+=lsd];
+
+    // normal delay - single event from previous queryInputSource and the following
+    [self.session performSelector:@selector(queryStandby) withObject:nil afterDelay:delay+=sd];
+    [self.session performSelector:@selector(queryMute) withObject:nil afterDelay:delay+=sd];
+    [self.session performSelector:@selector(queryMasterVolume) withObject:nil afterDelay:delay+=sd];
+}
+
 
 #pragma mark -
 #pragma mark Initialization methods
 
-- (void) initializeInputSourceName:(DREvent *)event {
-    static NSInteger inputSourceCount = 0;
-
-    DLog(@"%@", [event inputSource]);
-
-    [self.inputSources addObject:[event inputSource]];
-    inputSourceCount++;
-}
 
 - (void) initializeInputSourceUsage:(DREvent *)event {
-    static NSInteger usageCount = 0;
     
     DRInputSource * source = [event inputSource];
     if ([source.name isEqualToString:@"DEL"])
         [self.inputSources removeObject:source];
 
-    usageCount++;
-    if (usageCount == NUM_4308CI_SOURCES-1) {
+    _inputSourceUsageCount++;
+    if (_inputSourceUsageCount == NUM_4308CI_SOURCES-1) {
         // all usage events received
         NSMutableArray * result = [NSMutableArray arrayWithCapacity:NUM_4308CI_SOURCES];
         for (DRInputSource * src in self.inputSources) {
             [result addObject:src.name];
         }
         self.inputSourceNames = result;
+
+        // all done, turn off initializing spinner that was turned on in queryMain
         self.initializing = NO;
     }
 }
@@ -151,6 +169,7 @@ extern NSString * const DRSatelliteInputSource;
 #pragma mark Session delegate callbacks
 
 - (void) session:(DRSession *)session didReceiveEvent:(DREvent *)event {
+    DLog(@"%@", event);
     switch (event.eventType) {
         case DenonMuteEvent:
             self.mute = [event boolValue];
@@ -174,7 +193,7 @@ extern NSString * const DRSatelliteInputSource;
             [self initializeInputSourceUsage:event];
             break;
         case DenonInputSourceNameEvent:
-            [self initializeInputSourceName:event];
+            [self.inputSources addObject:[event inputSource]];
             break;
         default:
             DLog(@"unexpected eventType: %@ - add a new case to switch statement", event);
@@ -257,7 +276,7 @@ extern NSString * const DRSatelliteInputSource;
     // volume command pending, prevents the slider from jumping backwards
     // when holding down keyboard shortcut
     if (!_waitingForMasterVolumeEvent) {
-        [self.session sendMasterVolume:self.masterVolumeDb+=2.0];
+        [self.session sendMasterVolume:self.masterVolumeDb+=_volumeIncrement];
         _waitingForMasterVolumeEvent = YES;
     }
 }
@@ -273,9 +292,24 @@ extern NSString * const DRSatelliteInputSource;
     // volume command pending, prevents the slider from jumping backwards
     // when holding down keyboard shortcut
     if (!_waitingForMasterVolumeEvent) {
-        [self.session sendMasterVolume:self.masterVolumeDb-=2.0];
+        [self.session sendMasterVolume:self.masterVolumeDb-=_volumeIncrement];
         _waitingForMasterVolumeEvent = YES;
     }
+}
+
+- (IBAction) openPreferences:(id)sender {
+    NSWindow * window = [_preferencesWindowController window];
+
+    if (![window isVisible])
+        [window center];
+
+    [window makeKeyAndOrderFront:self];
+}
+
+- (IBAction) reconnectAction:(id)sender {
+    [self disconnectIfConnected];
+    // connection refused error if connect not delayed - 0.2 value is emperical
+    [self performSelector:@selector(connect) withObject:nil afterDelay:0.2];
 }
 
 @end

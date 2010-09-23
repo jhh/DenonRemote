@@ -14,12 +14,15 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+@class PreferencesWindowController;
 @class DRSession;
 
 @interface DenonRemoteAppDelegate : NSObject {
 
 @private
     NSWindow *       _window;
+    PreferencesWindowController * _preferencesWindowController;
+    NSUserDefaults * _defaults;
     DRSession *      _session;
     BOOL             _initializing;
     BOOL             _active;
@@ -28,8 +31,13 @@
     NSMutableArray * _inputSources;
     NSArray *        _inputSourceNames;
     NSUInteger       _selectedInputSourceIndex;
+    NSUInteger       _inputSourceUsageCount;
     float            _masterVolumeDb;
+    float            _volumeIncrement;
 }
+
+// Public Methods
+
 
 // Actions
 
@@ -39,6 +47,8 @@
 - (IBAction) changeMasterVolume:(id)sender;
 - (IBAction) incrementMasterVolume:(id)sender;
 - (IBAction) decrementMasterVolume:(id)sender;
+- (IBAction) openPreferences:(id)sender;
+- (IBAction) reconnectAction:(id)sender;
 
 // Properties
 

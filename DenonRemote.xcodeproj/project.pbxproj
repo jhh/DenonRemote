@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F29BF001246324000664F7A /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F29BEFF1246324000664F7A /* Defaults.plist */; };
 		1F43FB541240295A00CE339B /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F43FB531240295A00CE339B /* AsyncSocket.m */; };
+		1F5BD0781245913800B65915 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD0771245913800B65915 /* PreferencesWindowController.m */; };
+		1F5BD07D1245978D00B65915 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5BD074124590E600B65915 /* PreferencesWindow.xib */; };
 		1F62F325123071660008CD42 /* DenonRemote.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1F62F324123071660008CD42 /* DenonRemote.icns */; };
 		1F62F3311230732F0008CD42 /* DREvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32A1230732F0008CD42 /* DREvent.m */; };
 		1F62F3321230732F0008CD42 /* DRSession+Commands.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32C1230732F0008CD42 /* DRSession+Commands.m */; };
@@ -22,8 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F29BEFF1246324000664F7A /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		1F43FB521240295A00CE339B /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
 		1F43FB531240295A00CE339B /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		1F5BD075124590E600B65915 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = en.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
+		1F5BD0761245913800B65915 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		1F5BD0771245913800B65915 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
 		1F62F324123071660008CD42 /* DenonRemote.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DenonRemote.icns; sourceTree = "<group>"; };
 		1F62F3281230732F0008CD42 /* DRDebuggingMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRDebuggingMacros.h; sourceTree = "<group>"; };
 		1F62F3291230732F0008CD42 /* DREvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DREvent.h; sourceTree = "<group>"; };
@@ -92,6 +99,8 @@
 		1FEF92D512306F720069D6BE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1F5BD0761245913800B65915 /* PreferencesWindowController.h */,
+				1F5BD0771245913800B65915 /* PreferencesWindowController.m */,
 				1FEF92EF12306F730069D6BE /* DenonRemoteAppDelegate.h */,
 				1FEF92F012306F730069D6BE /* DenonRemoteAppDelegate.m */,
 			);
@@ -110,6 +119,8 @@
 		1FEF92D712306F720069D6BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1F29BEFF1246324000664F7A /* Defaults.plist */,
+				1F5BD074124590E600B65915 /* PreferencesWindow.xib */,
 				1F62F324123071660008CD42 /* DenonRemote.icns */,
 				1FEF92E212306F730069D6BE /* DenonRemote-Info.plist */,
 				1FEF92E412306F730069D6BE /* InfoPlist.strings */,
@@ -187,8 +198,10 @@
 			files = (
 				1FEF92E612306F730069D6BE /* InfoPlist.strings in Resources */,
 				1FEF92EB12306F730069D6BE /* MainMenu.xib in Resources */,
+				1F5BD07D1245978D00B65915 /* PreferencesWindow.xib in Resources */,
 				1FEF92EE12306F730069D6BE /* Credits.rtf in Resources */,
 				1F62F325123071660008CD42 /* DenonRemote.icns in Resources */,
+				1F29BF001246324000664F7A /* Defaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,12 +219,21 @@
 				1F62F3331230732F0008CD42 /* DRSession.m in Sources */,
 				1FA613C01232A6F400A08A5B /* DRInputSource.m in Sources */,
 				1F43FB541240295A00CE339B /* AsyncSocket.m in Sources */,
+				1F5BD0781245913800B65915 /* PreferencesWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		1F5BD074124590E600B65915 /* PreferencesWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F5BD075124590E600B65915 /* en */,
+			);
+			name = PreferencesWindow.xib;
+			sourceTree = "<group>";
+		};
 		1FEF92E412306F730069D6BE /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

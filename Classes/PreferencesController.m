@@ -15,11 +15,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import "PreferencesWindowController.h"
+#import "PreferencesController.h"
 #import "DRDebuggingMacros.h"
 #import "AsyncSocket.h"
 
-@interface PreferencesWindowController ()
+@interface PreferencesController ()
 
 // read/write variants of public properties
 @property(nonatomic, assign, readwrite) NSImage * receiverStatusImage;
@@ -31,7 +31,7 @@
 @end
 
 
-@implementation PreferencesWindowController
+@implementation PreferencesController
 
 - (id)init {
     if ((self = [super initWithWindowNibName:@"PreferencesWindow"])) {

@@ -14,14 +14,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-@class PreferencesWindowController;
+@class PreferencesController;
 @class DRSession;
 
 @interface DenonRemoteAppDelegate : NSObject {
 
 @private
     NSWindow *       _window;
-    PreferencesWindowController * _preferencesWindowController;
+    PreferencesController * _preferencesController;
     NSUserDefaults * _defaults;
     DRSession *      _session;
     BOOL             _initializing;

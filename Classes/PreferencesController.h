@@ -18,7 +18,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface PreferencesWindowController : NSWindowController {
+@interface PreferencesController : NSWindowController {
 @private
     NSUserDefaults * _defaults;
     NSString *       _receiverAddress;

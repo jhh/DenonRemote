@@ -16,7 +16,7 @@
 // limitations under the License.
 
 #import "DenonRemoteAppDelegate.h"
-#import "PreferencesWindowController.h"
+#import "PreferencesController.h"
 
 #import "DRSession+Commands.h"
 #import "DREvent.h"
@@ -66,7 +66,7 @@ extern NSString * const DRSatelliteInputSource;
         _defaults = [NSUserDefaults standardUserDefaults];
         _volumeIncrement = [_defaults floatForKey:@"VolumeIncrement"];
         self.inputSources = [NSMutableArray arrayWithCapacity:15];
-        _preferencesWindowController = [[PreferencesWindowController alloc] init];
+        _preferencesController = [[PreferencesController alloc] init];
     }
     return self;
 }
@@ -298,7 +298,7 @@ extern NSString * const DRSatelliteInputSource;
 }
 
 - (IBAction) openPreferences:(id)sender {
-    NSWindow * window = [_preferencesWindowController window];
+    NSWindow * window = [_preferencesController window];
 
     if (![window isVisible])
         [window center];

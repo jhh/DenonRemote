@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ReceiverAddress</key>
+	<string>0.0.0.0</string>
+	<key>VolumeIncrement</key>
+	<real>1</real>
+	<key>ReceiverStatusTimeout</key>
+	<integer>1</integer>
+	<key>ReceiverPort</key>
+	<integer>23</integer>
+	<key>CommandSendDelay</key>
+	<real>0.2</real>
+</dict>
+</plist>

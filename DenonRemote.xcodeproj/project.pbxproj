@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F29BF001246324000664F7A /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F29BEFF1246324000664F7A /* Defaults.plist */; };
+		1F43FB541240295A00CE339B /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F43FB531240295A00CE339B /* AsyncSocket.m */; };
+		1F5BD07D1245978D00B65915 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5BD074124590E600B65915 /* PreferencesWindow.xib */; };
+		1F62F325123071660008CD42 /* DenonRemote.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1F62F324123071660008CD42 /* DenonRemote.icns */; };
+		1F62F3311230732F0008CD42 /* DREvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32A1230732F0008CD42 /* DREvent.m */; };
+		1F62F3321230732F0008CD42 /* DRSession+Commands.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32C1230732F0008CD42 /* DRSession+Commands.m */; };
+		1F62F3331230732F0008CD42 /* DRSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32E1230732F0008CD42 /* DRSession.m */; };
+		1F90AE88124E2A530050F566 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F90AE87124E2A530050F566 /* PreferencesController.m */; };
+		1FA613C01232A6F400A08A5B /* DRInputSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA613BF1232A6F400A08A5B /* DRInputSource.m */; };
+		1FEF92E112306F730069D6BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEF92E012306F730069D6BE /* Cocoa.framework */; };
+		1FEF92E612306F730069D6BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF92E412306F730069D6BE /* InfoPlist.strings */; };
+		1FEF92E812306F730069D6BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF92E712306F730069D6BE /* main.m */; };
+		1FEF92EB12306F730069D6BE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF92E912306F730069D6BE /* MainMenu.xib */; };
+		1FEF92EE12306F730069D6BE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF92EC12306F730069D6BE /* Credits.rtf */; };
+		1FEF92F112306F730069D6BE /* DenonRemoteAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF92F012306F730069D6BE /* DenonRemoteAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F29BEFF1246324000664F7A /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
+		1F43FB521240295A00CE339B /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		1F43FB531240295A00CE339B /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		1F5BD075124590E600B65915 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = en.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
+		1F62F324123071660008CD42 /* DenonRemote.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DenonRemote.icns; sourceTree = "<group>"; };
+		1F62F3281230732F0008CD42 /* DRDebuggingMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRDebuggingMacros.h; sourceTree = "<group>"; };
+		1F62F3291230732F0008CD42 /* DREvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DREvent.h; sourceTree = "<group>"; };
+		1F62F32A1230732F0008CD42 /* DREvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DREvent.m; sourceTree = "<group>"; };
+		1F62F32B1230732F0008CD42 /* DRSession+Commands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DRSession+Commands.h"; sourceTree = "<group>"; };
+		1F62F32C1230732F0008CD42 /* DRSession+Commands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DRSession+Commands.m"; sourceTree = "<group>"; };
+		1F62F32D1230732F0008CD42 /* DRSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSession.h; sourceTree = "<group>"; };
+		1F62F32E1230732F0008CD42 /* DRSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSession.m; sourceTree = "<group>"; };
+		1F90AE86124E2A530050F566 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		1F90AE87124E2A530050F566 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		1FA613BE1232A6F400A08A5B /* DRInputSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRInputSource.h; sourceTree = "<group>"; };
+		1FA613BF1232A6F400A08A5B /* DRInputSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRInputSource.m; sourceTree = "<group>"; };
+		1FEF92DD12306F730069D6BE /* Denon Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Denon Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FEF92E012306F730069D6BE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1FEF92E212306F730069D6BE /* DenonRemote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DenonRemote-Info.plist"; sourceTree = "<group>"; };
+		1FEF92E312306F730069D6BE /* DenonRemote_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DenonRemote_Prefix.pch; sourceTree = "<group>"; };
+		1FEF92E512306F730069D6BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1FEF92E712306F730069D6BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1FEF92EA12306F730069D6BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1FEF92ED12306F730069D6BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1FEF92EF12306F730069D6BE /* DenonRemoteAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DenonRemoteAppDelegate.h; sourceTree = "<group>"; };
+		1FEF92F012306F730069D6BE /* DenonRemoteAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DenonRemoteAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FEF92DA12306F720069D6BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FEF92E112306F730069D6BE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F62F3271230732F0008CD42 /* DenonRemoteLib */ = {
+			isa = PBXGroup;
+			children = (
+				1F43FB521240295A00CE339B /* AsyncSocket.h */,
+				1F43FB531240295A00CE339B /* AsyncSocket.m */,
+				1F62F3281230732F0008CD42 /* DRDebuggingMacros.h */,
+				1F62F3291230732F0008CD42 /* DREvent.h */,
+				1F62F32A1230732F0008CD42 /* DREvent.m */,
+				1F62F32B1230732F0008CD42 /* DRSession+Commands.h */,
+				1F62F32C1230732F0008CD42 /* DRSession+Commands.m */,
+				1F62F32D1230732F0008CD42 /* DRSession.h */,
+				1F62F32E1230732F0008CD42 /* DRSession.m */,
+				1FA613BE1232A6F400A08A5B /* DRInputSource.h */,
+				1FA613BF1232A6F400A08A5B /* DRInputSource.m */,
+			);
+			name = DenonRemoteLib;
+			path = "/Users/jeff/Developer/Denon Remote/DenonRemoteLib/Classes";
+			sourceTree = "<absolute>";
+		};
+		1FEF92CE12306F720069D6BE = {
+			isa = PBXGroup;
+			children = (
+				1F62F3271230732F0008CD42 /* DenonRemoteLib */,
+				1FEF92D512306F720069D6BE /* Classes */,
+				1FEF92D612306F720069D6BE /* Other Sources */,
+				1FEF92D712306F720069D6BE /* Resources */,
+				1FEF92D812306F720069D6BE /* Frameworks */,
+				1FEF92DE12306F730069D6BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FEF92D512306F720069D6BE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1F90AE86124E2A530050F566 /* PreferencesController.h */,
+				1F90AE87124E2A530050F566 /* PreferencesController.m */,
+				1FEF92EF12306F730069D6BE /* DenonRemoteAppDelegate.h */,
+				1FEF92F012306F730069D6BE /* DenonRemoteAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1FEF92D612306F720069D6BE /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1FEF92E312306F730069D6BE /* DenonRemote_Prefix.pch */,
+				1FEF92E712306F730069D6BE /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		1FEF92D712306F720069D6BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1F29BEFF1246324000664F7A /* Defaults.plist */,
+				1F5BD074124590E600B65915 /* PreferencesWindow.xib */,
+				1F62F324123071660008CD42 /* DenonRemote.icns */,
+				1FEF92E212306F730069D6BE /* DenonRemote-Info.plist */,
+				1FEF92E412306F730069D6BE /* InfoPlist.strings */,
+				1FEF92E912306F730069D6BE /* MainMenu.xib */,
+				1FEF92EC12306F730069D6BE /* Credits.rtf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1FEF92D812306F720069D6BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FEF92E012306F730069D6BE /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FEF92DE12306F730069D6BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FEF92DD12306F730069D6BE /* Denon Remote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FEF92DC12306F720069D6BE /* DenonRemote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FEF92F412306F730069D6BE /* Build configuration list for PBXNativeTarget "DenonRemote" */;
+			buildPhases = (
+				1FEF92D912306F720069D6BE /* Sources */,
+				1FEF92DA12306F720069D6BE /* Frameworks */,
+				1FEF92DB12306F720069D6BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DenonRemote;
+			productName = DenonRemote;
+			productReference = 1FEF92DD12306F730069D6BE /* Denon Remote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FEF92D012306F720069D6BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Jeff Hutchison";
+			};
+			buildConfigurationList = 1FEF92D312306F720069D6BE /* Build configuration list for PBXProject "DenonRemote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1FEF92CE12306F720069D6BE;
+			productRefGroup = 1FEF92DE12306F730069D6BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FEF92DC12306F720069D6BE /* DenonRemote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FEF92DB12306F720069D6BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FEF92E612306F730069D6BE /* InfoPlist.strings in Resources */,
+				1FEF92EB12306F730069D6BE /* MainMenu.xib in Resources */,
+				1F5BD07D1245978D00B65915 /* PreferencesWindow.xib in Resources */,
+				1FEF92EE12306F730069D6BE /* Credits.rtf in Resources */,
+				1F62F325123071660008CD42 /* DenonRemote.icns in Resources */,
+				1F29BF001246324000664F7A /* Defaults.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FEF92D912306F720069D6BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FEF92E812306F730069D6BE /* main.m in Sources */,
+				1FEF92F112306F730069D6BE /* DenonRemoteAppDelegate.m in Sources */,
+				1F62F3311230732F0008CD42 /* DREvent.m in Sources */,
+				1F62F3321230732F0008CD42 /* DRSession+Commands.m in Sources */,
+				1F62F3331230732F0008CD42 /* DRSession.m in Sources */,
+				1FA613C01232A6F400A08A5B /* DRInputSource.m in Sources */,
+				1F43FB541240295A00CE339B /* AsyncSocket.m in Sources */,
+				1F90AE88124E2A530050F566 /* PreferencesController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F5BD074124590E600B65915 /* PreferencesWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F5BD075124590E600B65915 /* en */,
+			);
+			name = PreferencesWindow.xib;
+			sourceTree = "<group>";
+		};
+		1FEF92E412306F730069D6BE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FEF92E512306F730069D6BE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1FEF92E912306F730069D6BE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FEF92EA12306F730069D6BE /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		1FEF92EC12306F730069D6BE /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FEF92ED12306F730069D6BE /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FEF92F212306F730069D6BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CURRENT_PROJECT_VERSION = 5;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		1FEF92F312306F730069D6BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CURRENT_PROJECT_VERSION = 5;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		1FEF92F512306F730069D6BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DenonRemote_Prefix.pch;
+				INFOPLIST_FILE = "DenonRemote-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Denon Remote";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1FEF92F612306F730069D6BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DenonRemote_Prefix.pch;
+				INFOPLIST_FILE = "DenonRemote-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Denon Remote";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FEF92D312306F720069D6BE /* Build configuration list for PBXProject "DenonRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FEF92F212306F730069D6BE /* Debug */,
+				1FEF92F312306F730069D6BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FEF92F412306F730069D6BE /* Build configuration list for PBXNativeTarget "DenonRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FEF92F512306F730069D6BE /* Debug */,
+				1FEF92F612306F730069D6BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FEF92D012306F720069D6BE /* Project object */;
+}

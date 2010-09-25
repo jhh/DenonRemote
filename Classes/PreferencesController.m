@@ -25,8 +25,8 @@
 @property(nonatomic, assign, readwrite) NSImage * receiverStatusImage;
 @property(nonatomic, assign, readwrite) NSString * receiverStatusMessage;
 
-// forward declaratons
-- (void) updateReceiverAddressStatus;
+// forward declarations
+
 
 @end
 
@@ -54,7 +54,6 @@
 - (void) setReceiverAddress:(NSString *)receiverAddress {
     _receiverAddress = [receiverAddress copy];
     [_defaults setValue:self.receiverAddress forKey:@"ReceiverAddress"];
-    [self updateReceiverAddressStatus];
 }
 
 @synthesize receiverStatusImage = _receiverStatusImage;
@@ -63,14 +62,5 @@
 #pragma mark -
 #pragma mark Other Methods
 
-- (void) updateReceiverAddressStatus {
-//    AsyncSocket * sock = [[AsyncSocket alloc] init];
-//    UInt16 port = [_defaults integerForKey:@"ReceiverPort"];
-//    NSTimeInterval timeout = [_defaults floatForKey:@"ReceiverStatusTimeout"];
-//    NSError * error;
-//
-//    [sock connectToHost:self.receiverAddress onPort:port withTimeout:timeout error:&error];
-//    self.receiverStatusImage = [NSImage imageNamed:NSImageNameStatusAvailable];
-}
 
 @end

@@ -1,4 +1,4 @@
-// PreferencesWindowController.h
+// SessionManager.h
 // DenonRemote
 //
 // Copyright 2010 Jeffrey Hutchison
@@ -18,22 +18,24 @@
 #import <Cocoa/Cocoa.h>
 #import "DenonRemoteLib.h"
 
+extern NSString * const DREventNotification;
 
-@interface PreferencesController : NSWindowController {
+@interface SessionManager : NSObject <DRSessionDelegate> {
 @private
+    DRSession *      _session;
     NSUserDefaults * _defaults;
-    NSString *       _receiverAddress;
-    NSImage *        _receiverStatusImage;
-    NSString *       _receiverStatusMessage;
+    DREvent *        _event;
 }
 
-// Actions
+// Public Methods
 
++ (SessionManager *) sharedManager;
+- (void) connect;
 
 // Properties
 
-@property(nonatomic, copy, readwrite) NSString * receiverAddress;
-@property(nonatomic, assign, readonly) NSImage * receiverStatusImage;
-@property(nonatomic, assign, readonly) NSString * receiverStatusMessage;
+@property (nonatomic, assign, readonly) DRSession * session;
+@property (nonatomic, assign, readonly) DREvent * event;
+@property (nonatomic, assign, readonly) NSUserDefaults * defaults;
 
 @end

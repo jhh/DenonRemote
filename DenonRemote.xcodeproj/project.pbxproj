@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1AE7AA124E67070031CC7C /* MainZoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1AE7A8124E67070031CC7C /* MainZoneController.m */; };
+		1F1AE7B2124E828D0031CC7C /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1AE7B1124E828D0031CC7C /* SessionManager.m */; };
 		1F29BF001246324000664F7A /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F29BEFF1246324000664F7A /* Defaults.plist */; };
 		1F43FB541240295A00CE339B /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F43FB531240295A00CE339B /* AsyncSocket.m */; };
 		1F5BD07D1245978D00B65915 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5BD074124590E600B65915 /* PreferencesWindow.xib */; };
@@ -16,6 +18,9 @@
 		1F62F3331230732F0008CD42 /* DRSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32E1230732F0008CD42 /* DRSession.m */; };
 		1F90AE88124E2A530050F566 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F90AE87124E2A530050F566 /* PreferencesController.m */; };
 		1FA613C01232A6F400A08A5B /* DRInputSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA613BF1232A6F400A08A5B /* DRInputSource.m */; };
+		1FCBE9AF124F988300F73E79 /* MainZoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCBE9AD124F97F200F73E79 /* MainZoneView.xib */; };
+		1FED4587124F8DE800B787A5 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FED4586124F8DE800B787A5 /* MainWindowController.m */; };
+		1FED458A124F8E5300B787A5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FED4588124F8E5300B787A5 /* MainWindow.xib */; };
 		1FEF92E112306F730069D6BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEF92E012306F730069D6BE /* Cocoa.framework */; };
 		1FEF92E612306F730069D6BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF92E412306F730069D6BE /* InfoPlist.strings */; };
 		1FEF92E812306F730069D6BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF92E712306F730069D6BE /* main.m */; };
@@ -25,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1AE7A7124E67070031CC7C /* MainZoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainZoneController.h; sourceTree = "<group>"; };
+		1F1AE7A8124E67070031CC7C /* MainZoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainZoneController.m; sourceTree = "<group>"; };
+		1F1AE7B0124E828D0031CC7C /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
+		1F1AE7B1124E828D0031CC7C /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
 		1F29BEFF1246324000664F7A /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		1F43FB521240295A00CE339B /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
 		1F43FB531240295A00CE339B /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
@@ -37,10 +46,15 @@
 		1F62F32C1230732F0008CD42 /* DRSession+Commands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DRSession+Commands.m"; sourceTree = "<group>"; };
 		1F62F32D1230732F0008CD42 /* DRSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSession.h; sourceTree = "<group>"; };
 		1F62F32E1230732F0008CD42 /* DRSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSession.m; sourceTree = "<group>"; };
+		1F72E3F7124EC1930081021B /* DenonRemoteLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DenonRemoteLib.h; sourceTree = "<group>"; };
 		1F90AE86124E2A530050F566 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		1F90AE87124E2A530050F566 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		1FA613BE1232A6F400A08A5B /* DRInputSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRInputSource.h; sourceTree = "<group>"; };
 		1FA613BF1232A6F400A08A5B /* DRInputSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRInputSource.m; sourceTree = "<group>"; };
+		1FCBE9AE124F97F200F73E79 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = en.lproj/MainZoneView.xib; sourceTree = "<group>"; };
+		1FED4585124F8DE800B787A5 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		1FED4586124F8DE800B787A5 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		1FED4589124F8E5300B787A5 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		1FEF92DD12306F730069D6BE /* Denon Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Denon Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FEF92E012306F730069D6BE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1FEF92E212306F730069D6BE /* DenonRemote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DenonRemote-Info.plist"; sourceTree = "<group>"; };
@@ -68,6 +82,7 @@
 		1F62F3271230732F0008CD42 /* DenonRemoteLib */ = {
 			isa = PBXGroup;
 			children = (
+				1F72E3F7124EC1930081021B /* DenonRemoteLib.h */,
 				1F43FB521240295A00CE339B /* AsyncSocket.h */,
 				1F43FB531240295A00CE339B /* AsyncSocket.m */,
 				1F62F3281230732F0008CD42 /* DRDebuggingMacros.h */,
@@ -99,6 +114,12 @@
 		1FEF92D512306F720069D6BE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1FED4585124F8DE800B787A5 /* MainWindowController.h */,
+				1FED4586124F8DE800B787A5 /* MainWindowController.m */,
+				1F1AE7B0124E828D0031CC7C /* SessionManager.h */,
+				1F1AE7B1124E828D0031CC7C /* SessionManager.m */,
+				1F1AE7A7124E67070031CC7C /* MainZoneController.h */,
+				1F1AE7A8124E67070031CC7C /* MainZoneController.m */,
 				1F90AE86124E2A530050F566 /* PreferencesController.h */,
 				1F90AE87124E2A530050F566 /* PreferencesController.m */,
 				1FEF92EF12306F730069D6BE /* DenonRemoteAppDelegate.h */,
@@ -119,12 +140,14 @@
 		1FEF92D712306F720069D6BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1F29BEFF1246324000664F7A /* Defaults.plist */,
+				1FCBE9AD124F97F200F73E79 /* MainZoneView.xib */,
+				1FEF92E912306F730069D6BE /* MainMenu.xib */,
+				1FED4588124F8E5300B787A5 /* MainWindow.xib */,
 				1F5BD074124590E600B65915 /* PreferencesWindow.xib */,
+				1F29BEFF1246324000664F7A /* Defaults.plist */,
 				1F62F324123071660008CD42 /* DenonRemote.icns */,
 				1FEF92E212306F730069D6BE /* DenonRemote-Info.plist */,
 				1FEF92E412306F730069D6BE /* InfoPlist.strings */,
-				1FEF92E912306F730069D6BE /* MainMenu.xib */,
 				1FEF92EC12306F730069D6BE /* Credits.rtf */,
 			);
 			name = Resources;
@@ -198,10 +221,12 @@
 			files = (
 				1FEF92E612306F730069D6BE /* InfoPlist.strings in Resources */,
 				1FEF92EB12306F730069D6BE /* MainMenu.xib in Resources */,
+				1FCBE9AF124F988300F73E79 /* MainZoneView.xib in Resources */,
 				1F5BD07D1245978D00B65915 /* PreferencesWindow.xib in Resources */,
 				1FEF92EE12306F730069D6BE /* Credits.rtf in Resources */,
 				1F62F325123071660008CD42 /* DenonRemote.icns in Resources */,
 				1F29BF001246324000664F7A /* Defaults.plist in Resources */,
+				1FED458A124F8E5300B787A5 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +245,9 @@
 				1FA613C01232A6F400A08A5B /* DRInputSource.m in Sources */,
 				1F43FB541240295A00CE339B /* AsyncSocket.m in Sources */,
 				1F90AE88124E2A530050F566 /* PreferencesController.m in Sources */,
+				1F1AE7AA124E67070031CC7C /* MainZoneController.m in Sources */,
+				1F1AE7B2124E828D0031CC7C /* SessionManager.m in Sources */,
+				1FED4587124F8DE800B787A5 /* MainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +260,22 @@
 				1F5BD075124590E600B65915 /* en */,
 			);
 			name = PreferencesWindow.xib;
+			sourceTree = "<group>";
+		};
+		1FCBE9AD124F97F200F73E79 /* MainZoneView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FCBE9AE124F97F200F73E79 /* en */,
+			);
+			name = MainZoneView.xib;
+			sourceTree = "<group>";
+		};
+		1FED4588124F8E5300B787A5 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FED4589124F8E5300B787A5 /* MainWindow.xib */,
+			);
+			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
 		1FEF92E412306F730069D6BE /* InfoPlist.strings */ = {
@@ -265,7 +309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -283,7 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

@@ -14,54 +14,23 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+#import <Cocoa/Cocoa.h>
+#import "DenonRemoteLib.h"
+
+
 @class PreferencesController;
-@class DRSession;
+@class MainWindowController;
 
 @interface DenonRemoteAppDelegate : NSObject {
 
 @private
-    NSWindow *       _window;
-    PreferencesController * _preferencesController;
-    NSUserDefaults * _defaults;
-    DRSession *      _session;
-    BOOL             _initializing;
-    BOOL             _active;
-    BOOL             _mute;
-    BOOL             _waitingForMasterVolumeEvent;
-    NSMutableArray * _inputSources;
-    NSArray *        _inputSourceNames;
-    NSUInteger       _selectedInputSourceIndex;
-    NSUInteger       _inputSourceUsageCount;
-    float            _masterVolumeDb;
-    float            _volumeIncrement;
+    MainWindowController *       _mainWindowController;
+//    PreferencesController * _preferencesController;
 }
 
 // Public Methods
 
-
-// Actions
-
-- (IBAction) activeStandbyAction:(id)sender;
-- (IBAction) muteUnmuteAction:(id)sender;
-- (IBAction) changeInputSourceAction:(id)sender;
-- (IBAction) changeMasterVolume:(id)sender;
-- (IBAction) incrementMasterVolume:(id)sender;
-- (IBAction) decrementMasterVolume:(id)sender;
-- (IBAction) openPreferences:(id)sender;
-- (IBAction) reconnectAction:(id)sender;
-
 // Properties
-
-@property (nonatomic, assign) IBOutlet NSWindow *             window;
-
-@property (nonatomic, assign, readonly, getter=isInitializing) BOOL initializing;
-@property (nonatomic, assign, readonly, getter=isActive) BOOL active;
-@property (nonatomic, assign, readonly, getter=isMute) BOOL   mute;
-@property (nonatomic, copy,   readonly) NSString *            activeStandbyButtonTitle;
-@property (nonatomic, copy,   readonly) NSString *            muteUnmuteButtonTitle;
-@property (nonatomic, copy,   readonly) NSArray *             inputSourceNames;
-@property (nonatomic, assign, readwrite) NSUInteger           selectedInputSourceIndex;
-@property (nonatomic, assign, readwrite) float                masterVolumeDb;
 
 @end
 

@@ -16,8 +16,6 @@
 // limitations under the License.
 
 #import "PreferencesController.h"
-#import "DRDebuggingMacros.h"
-#import "AsyncSocket.h"
 
 @interface PreferencesController ()
 

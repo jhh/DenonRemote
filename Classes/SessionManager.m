@@ -19,6 +19,14 @@
 
 NSString * const DREventNotification = @"DREventNotification";
 
+@interface SessionManager ()
+
+// read/write variants of public properties
+@property (nonatomic, assign, readwrite) DRSession * session;
+@property (nonatomic, assign, readwrite) DREvent * event;
+@property (nonatomic, assign, readwrite) NSUserDefaults * defaults;
+
+@end
 
 @implementation SessionManager
 
@@ -33,19 +41,18 @@ NSString * const DREventNotification = @"DREventNotification";
 
 - (id)init {
     if ((self = [super init])) {
-        _defaults = [NSUserDefaults standardUserDefaults];
+        self.defaults = [NSUserDefaults standardUserDefaults];
     }
     return self;
 }
-
 
 #pragma mark -
 #pragma mark Public Methods
 
 
 - (void) connect {
-    _session = [[DRSession alloc] initWithHostName:[_defaults valueForKey:@"ReceiverAddress"]];
-    _session.delegate = self;
+    self.session = [[DRSession alloc] initWithHostName:[self.defaults valueForKey:@"ReceiverAddress"]];
+    self.session.delegate = self;
     [self.session queryStandby];
 }
 
@@ -55,7 +62,7 @@ NSString * const DREventNotification = @"DREventNotification";
 
 
 - (void) session:(DRSession *)session didReceiveEvent:(DREvent *)event {
-    _event = event;
+    self.event = event;
     [[NSNotificationCenter defaultCenter] postNotificationName:DREventNotification object:self];
 }
 

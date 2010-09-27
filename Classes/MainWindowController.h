@@ -17,11 +17,17 @@
 
 #import <Cocoa/Cocoa.h>
 @class MainZoneController;
+@class ConfigController;
 
 
 @interface MainWindowController : NSWindowController {
 @private
     MainZoneController * _mainZoneController;
+    ConfigController * _configController;
 }
+
+- (IBAction) showConfigView:(id)sender;
+
+- (void) doneWithConfigView;
 
 @end

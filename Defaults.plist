@@ -6,11 +6,13 @@
 	<string>0.0.0.0</string>
 	<key>VolumeIncrement</key>
 	<real>1</real>
-	<key>ReceiverStatusTimeout</key>
-	<integer>1</integer>
 	<key>ReceiverPort</key>
 	<integer>23</integer>
 	<key>CommandSendDelay</key>
 	<real>0.2</real>
+	<key>ReceiverConnectionCheckerTimeout</key>
+	<integer>1</integer>
+	<key>ReceiverConnectionCheckerDelay</key>
+	<integer>3</integer>
 </dict>
 </plist>

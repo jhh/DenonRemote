@@ -1,4 +1,4 @@
-// PreferencesWindowController.h
+// MainWindowController.h
 // DenonRemote
 //
 // Copyright 2010 Jeffrey Hutchison
@@ -16,24 +16,18 @@
 // limitations under the License.
 
 #import <Cocoa/Cocoa.h>
-#import "DenonRemoteLib.h"
+@class MainZoneController;
+@class ConfigController;
 
 
-@interface PreferencesController : NSWindowController {
+@interface MainWindowController : NSWindowController {
 @private
-    NSUserDefaults * _defaults;
-    NSString *       _receiverAddress;
-    NSImage *        _receiverStatusImage;
-    NSString *       _receiverStatusMessage;
+    MainZoneController * _mainZoneController;
+    ConfigController * _configController;
 }
 
-// Actions
+- (IBAction) showConfigView:(id)sender;
 
-
-// Properties
-
-@property(nonatomic, copy, readwrite) NSString * receiverAddress;
-@property(nonatomic, assign, readonly) NSImage * receiverStatusImage;
-@property(nonatomic, assign, readonly) NSString * receiverStatusMessage;
+- (void) doneWithConfigView;
 
 @end

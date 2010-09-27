@@ -17,7 +17,16 @@
 
 #import "MainWindowController.h"
 #import "MainZoneController.h"
+#import "ConfigController.h"
+#import "SessionManager.h"
 
+@interface MainWindowController ()
+- (MainZoneController *) mainZoneController;
+- (ConfigController *) configController;
+- (void) loadView:(NSViewController *)viewController;
+- (BOOL) needsConfiguration;
+
+@end
 
 @implementation MainWindowController
 
@@ -27,32 +36,68 @@
     return self;
 }
 
+- (void)windowDidLoad {
+    [super windowDidLoad];
+
+    if ([self needsConfiguration]) {
+        [self loadView:[self configController]];
+    } else {
+        [self loadView:[self mainZoneController]];
+    }
+
+    // patch the detail view into the responder chain
+	NSResponder * aNextResponder = [self nextResponder];
+	[self setNextResponder:[self mainZoneController]];
+	[[self mainZoneController] setNextResponder:aNextResponder];
+
+}
+
+#pragma mark -
+#pragma mark Configuration View
+
+- (IBAction) showConfigView:(id)sender {
+    [[[SessionManager sharedManager] session] close];
+    [self loadView:[self configController]];
+}
+
+- (void) doneWithConfigView {
+    [[SessionManager sharedManager] connect];
+    [self loadView:[self mainZoneController]];
+}
+
+
+#pragma mark -
+#pragma mark Private Methods
+
+- (BOOL) needsConfiguration {
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    return [[defaults valueForKey:@"ReceiverAddress"] isEqualToString:@"0.0.0.0" ];
+}
+
+
+- (void) loadView:(NSViewController *)viewController {
+    NSView * contentView = [[self window] contentView];
+    NSView * newSubView = [viewController view];
+    
+    // Remove the current view
+    for (NSView * view in [contentView subviews])
+        [view removeFromSuperview];
+    
+    [contentView addSubview:newSubView];
+
+}
+
+
 - (MainZoneController *)mainZoneController {
     if (_mainZoneController == nil)
         _mainZoneController = [[MainZoneController alloc] init];
     return _mainZoneController;
 }
 
-
-- (void)windowDidLoad {
-    [super windowDidLoad];
-    
-    NSView * contentView = [[self window] contentView];
-    NSView * mainZoneView = [[self mainZoneController] view];
-    
-    // Remove the current view
-    for (NSView * view in [contentView subviews])
-        [view removeFromSuperview];
-    
-    [contentView addSubview:mainZoneView];
-
-    // patch the detail view into the responder chain
-	NSResponder * aNextResponder = [self nextResponder];
-	[self setNextResponder:_mainZoneController];
-	[_mainZoneController setNextResponder:aNextResponder];
-
-
+- (ConfigController *)configController {
+    if (_configController == nil)
+        _configController = [[ConfigController alloc] init];
+    return _configController;
 }
-
 
 @end

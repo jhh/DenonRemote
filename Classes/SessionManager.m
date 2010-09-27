@@ -25,7 +25,6 @@ NSString * const DREventNotification = @"DREventNotification";
 @property (nonatomic, assign, readwrite) DRSession * session;
 @property (nonatomic, assign, readwrite) DREvent * event;
 @property (nonatomic, assign, readwrite) NSUserDefaults * defaults;
-@property (nonatomic, assign, readwrite) BOOL connected;
 
 @end
 
@@ -46,12 +45,6 @@ NSString * const DREventNotification = @"DREventNotification";
     }
     return self;
 }
-
-#pragma mark -
-#pragma mark Properties
-
-@synthesize connected = _connected;
-
 
 #pragma mark -
 #pragma mark Public Methods

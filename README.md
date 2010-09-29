@@ -1,6 +1,6 @@
 # DenonRemote
 
-A Mac OSX application that controls a AVR-4308CI receiver over the network.
+A Mac OSX application that controls a Denon AVR-4308CI receiver over the network.
 
 ## Building DenonRemote
 

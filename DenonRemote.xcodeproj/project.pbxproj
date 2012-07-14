@@ -60,6 +60,7 @@
 		1FCBE9AE124F97F200F73E79 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = en.lproj/MainZoneView.xib; sourceTree = "<group>"; };
 		1FCBE9B6124F9F7600F73E79 /* ConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigController.h; sourceTree = "<group>"; };
 		1FCBE9B7124F9F7600F73E79 /* ConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigController.m; sourceTree = "<group>"; };
+		1FD8CF2013DB2217002C40D7 /* DenonRemoteLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DenonRemoteLib.h; sourceTree = "<group>"; };
 		1FED4585124F8DE800B787A5 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		1FED4586124F8DE800B787A5 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		1FED4589124F8E5300B787A5 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 			children = (
 				1F72E3F7124EC1930081021B /* DenonRemoteLib.h */,
 				1F43FB521240295A00CE339B /* AsyncSocket.h */,
+				1FD8CF2013DB2217002C40D7 /* DenonRemoteLib.h */,
 				1F43FB531240295A00CE339B /* AsyncSocket.m */,
 				1F62F3281230732F0008CD42 /* DRDebuggingMacros.h */,
 				1F62F3291230732F0008CD42 /* DREvent.h */,
@@ -104,8 +106,8 @@
 				1FA613BF1232A6F400A08A5B /* DRInputSource.m */,
 			);
 			name = DenonRemoteLib;
-			path = "/Users/jeff/Developer/Denon Remote/DenonRemoteLib/Classes";
-			sourceTree = "<absolute>";
+			path = ../DenonRemoteLib/Classes;
+			sourceTree = SOURCE_ROOT;
 		};
 		1FEF92CE12306F720069D6BE = {
 			isa = PBXGroup;
@@ -208,6 +210,7 @@
 		1FEF92D012306F720069D6BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0410;
 				ORGANIZATIONNAME = "Jeff Hutchison";
 			};
 			buildConfigurationList = 1FEF92D312306F720069D6BE /* Build configuration list for PBXProject "DenonRemote" */;
@@ -341,8 +344,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -356,8 +359,8 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -376,6 +379,7 @@
 				INFOPLIST_FILE = "DenonRemote-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Denon Remote";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -394,6 +398,7 @@
 				INFOPLIST_FILE = "DenonRemote-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Denon Remote";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

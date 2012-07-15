@@ -11,6 +11,7 @@
 		1F62F3311230732F0008CD42 /* DREvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32A1230732F0008CD42 /* DREvent.m */; };
 		1F62F3321230732F0008CD42 /* DRSession+Commands.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32C1230732F0008CD42 /* DRSession+Commands.m */; };
 		1F62F3331230732F0008CD42 /* DRSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32E1230732F0008CD42 /* DRSession.m */; };
+		1F751CB115B35CD600B2B7ED /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F751CB015B35CD600B2B7ED /* Defaults.plist */; };
 		1FA613C01232A6F400A08A5B /* DRInputSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA613BF1232A6F400A08A5B /* DRInputSource.m */; };
 		1FC1014F15B2007F007F34E8 /* ConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1014415B2007F007F34E8 /* ConfigController.m */; };
 		1FC1015015B2007F007F34E8 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1014615B2007F007F34E8 /* MainWindowController.m */; };
@@ -40,6 +41,7 @@
 		1F62F32C1230732F0008CD42 /* DRSession+Commands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DRSession+Commands.m"; sourceTree = "<group>"; };
 		1F62F32D1230732F0008CD42 /* DRSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSession.h; sourceTree = "<group>"; };
 		1F62F32E1230732F0008CD42 /* DRSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSession.m; sourceTree = "<group>"; };
+		1F751CB015B35CD600B2B7ED /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		1FA613BE1232A6F400A08A5B /* DRInputSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRInputSource.h; sourceTree = "<group>"; };
 		1FA613BF1232A6F400A08A5B /* DRInputSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRInputSource.m; sourceTree = "<group>"; };
 		1FC1014315B2007F007F34E8 /* ConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigController.h; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		1FEF92D712306F720069D6BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1F751CB015B35CD600B2B7ED /* Defaults.plist */,
 				1FC1015515B200A5007F34E8 /* ConfigView.xib */,
 				1FC1015715B200A5007F34E8 /* MainWindow.xib */,
 				1FC1015915B200A5007F34E8 /* MainZoneView.xib */,
@@ -238,6 +241,7 @@
 				1FC1015E15B200A5007F34E8 /* MainWindow.xib in Resources */,
 				1FC1015F15B200A5007F34E8 /* MainZoneView.xib in Resources */,
 				1FC1016015B200A5007F34E8 /* PreferencesWindow.xib in Resources */,
+				1F751CB115B35CD600B2B7ED /* Defaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CURRENT_PROJECT_VERSION = 2;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -347,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CURRENT_PROJECT_VERSION = 2;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -361,10 +367,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DenonRemote_Prefix.pch;
@@ -379,10 +387,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DenonRemote_Prefix.pch;

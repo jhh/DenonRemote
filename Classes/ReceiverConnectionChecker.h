@@ -40,8 +40,8 @@ typedef enum {
 
 // Properties
 
-@property (nonatomic, assign, readonly) ReceiverConnectionCheckerStatus status;
-@property (nonatomic, assign, readonly) NSError * error;
+@property (nonatomic, readonly) ReceiverConnectionCheckerStatus status;
+@property (nonatomic, readonly) NSError * error;
 
 // Public Methods
 

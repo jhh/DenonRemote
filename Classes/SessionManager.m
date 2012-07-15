@@ -22,9 +22,9 @@ NSString * const DREventNotification = @"DREventNotification";
 @interface SessionManager ()
 
 // read/write variants of public properties
-@property (nonatomic, assign, readwrite) DRSession * session;
-@property (nonatomic, assign, readwrite) DREvent * event;
-@property (nonatomic, assign, readwrite) NSUserDefaults * defaults;
+@property (nonatomic, readwrite) DRSession * session;
+@property (nonatomic, readwrite) DREvent * event;
+@property (nonatomic, readwrite) NSUserDefaults * defaults;
 
 @end
 

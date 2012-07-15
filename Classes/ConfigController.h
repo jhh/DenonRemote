@@ -31,9 +31,9 @@
 }
 
 @property (nonatomic, copy, readwrite) NSString * receiverAddress;
-@property (nonatomic, assign, readwrite) IBOutlet NSProgressIndicator * probeProgressIndicator;
-@property (nonatomic, assign, readwrite) NSImage * receiverStatusImage;
-@property (nonatomic, assign, readwrite) NSString * receiverStatusText;
+@property (nonatomic, readwrite) IBOutlet NSProgressIndicator * probeProgressIndicator;
+@property (nonatomic, readwrite) NSImage * receiverStatusImage;
+@property (nonatomic, readwrite) NSString * receiverStatusText;
 
 // Actions
 

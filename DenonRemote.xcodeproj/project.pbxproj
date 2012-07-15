@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F1AE7AA124E67070031CC7C /* MainZoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1AE7A8124E67070031CC7C /* MainZoneController.m */; };
-		1F1AE7B2124E828D0031CC7C /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1AE7B1124E828D0031CC7C /* SessionManager.m */; };
-		1F29BF001246324000664F7A /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F29BEFF1246324000664F7A /* Defaults.plist */; };
-		1F3F952C124FE207006D9AC9 /* ReceiverConnectionChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F952B124FE207006D9AC9 /* ReceiverConnectionChecker.m */; };
-		1F43FB541240295A00CE339B /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F43FB531240295A00CE339B /* AsyncSocket.m */; };
-		1F5BD07D1245978D00B65915 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5BD074124590E600B65915 /* PreferencesWindow.xib */; };
 		1F62F325123071660008CD42 /* DenonRemote.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1F62F324123071660008CD42 /* DenonRemote.icns */; };
 		1F62F3311230732F0008CD42 /* DREvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32A1230732F0008CD42 /* DREvent.m */; };
 		1F62F3321230732F0008CD42 /* DRSession+Commands.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32C1230732F0008CD42 /* DRSession+Commands.m */; };
 		1F62F3331230732F0008CD42 /* DRSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F62F32E1230732F0008CD42 /* DRSession.m */; };
-		1F90AE88124E2A530050F566 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F90AE87124E2A530050F566 /* PreferencesController.m */; };
+		1F751CB115B35CD600B2B7ED /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F751CB015B35CD600B2B7ED /* Defaults.plist */; };
 		1FA613C01232A6F400A08A5B /* DRInputSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA613BF1232A6F400A08A5B /* DRInputSource.m */; };
-		1FA8E41E124FA0CA00FE4432 /* ConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA8E41C124FA0B900FE4432 /* ConfigView.xib */; };
-		1FCBE9AF124F988300F73E79 /* MainZoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCBE9AD124F97F200F73E79 /* MainZoneView.xib */; };
-		1FCBE9B9124F9F7600F73E79 /* ConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCBE9B7124F9F7600F73E79 /* ConfigController.m */; };
-		1FED4587124F8DE800B787A5 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FED4586124F8DE800B787A5 /* MainWindowController.m */; };
-		1FED458A124F8E5300B787A5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FED4588124F8E5300B787A5 /* MainWindow.xib */; };
+		1FC1014F15B2007F007F34E8 /* ConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1014415B2007F007F34E8 /* ConfigController.m */; };
+		1FC1015015B2007F007F34E8 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1014615B2007F007F34E8 /* MainWindowController.m */; };
+		1FC1015115B2007F007F34E8 /* MainZoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1014815B2007F007F34E8 /* MainZoneController.m */; };
+		1FC1015215B2007F007F34E8 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1014A15B2007F007F34E8 /* PreferencesController.m */; };
+		1FC1015315B2007F007F34E8 /* ReceiverConnectionChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1014C15B2007F007F34E8 /* ReceiverConnectionChecker.m */; };
+		1FC1015415B2007F007F34E8 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1014E15B2007F007F34E8 /* SessionManager.m */; };
+		1FC1015D15B200A5007F34E8 /* ConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC1015515B200A5007F34E8 /* ConfigView.xib */; };
+		1FC1015E15B200A5007F34E8 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC1015715B200A5007F34E8 /* MainWindow.xib */; };
+		1FC1015F15B200A5007F34E8 /* MainZoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC1015915B200A5007F34E8 /* MainZoneView.xib */; };
+		1FC1016015B200A5007F34E8 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC1015B15B200A5007F34E8 /* PreferencesWindow.xib */; };
+		1FC1016915B2015B007F34E8 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1016715B2015B007F34E8 /* AsyncSocket.m */; };
 		1FEF92E112306F730069D6BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEF92E012306F730069D6BE /* Cocoa.framework */; };
 		1FEF92E612306F730069D6BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF92E412306F730069D6BE /* InfoPlist.strings */; };
 		1FEF92E812306F730069D6BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF92E712306F730069D6BE /* main.m */; };
@@ -33,16 +33,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F1AE7A7124E67070031CC7C /* MainZoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainZoneController.h; sourceTree = "<group>"; };
-		1F1AE7A8124E67070031CC7C /* MainZoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainZoneController.m; sourceTree = "<group>"; };
-		1F1AE7B0124E828D0031CC7C /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
-		1F1AE7B1124E828D0031CC7C /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
-		1F29BEFF1246324000664F7A /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
-		1F3F952A124FE206006D9AC9 /* ReceiverConnectionChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiverConnectionChecker.h; sourceTree = "<group>"; };
-		1F3F952B124FE207006D9AC9 /* ReceiverConnectionChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverConnectionChecker.m; sourceTree = "<group>"; };
-		1F43FB521240295A00CE339B /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
-		1F43FB531240295A00CE339B /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
-		1F5BD075124590E600B65915 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = en.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
 		1F62F324123071660008CD42 /* DenonRemote.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DenonRemote.icns; sourceTree = "<group>"; };
 		1F62F3281230732F0008CD42 /* DRDebuggingMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRDebuggingMacros.h; sourceTree = "<group>"; };
 		1F62F3291230732F0008CD42 /* DREvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DREvent.h; sourceTree = "<group>"; };
@@ -51,19 +41,28 @@
 		1F62F32C1230732F0008CD42 /* DRSession+Commands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DRSession+Commands.m"; sourceTree = "<group>"; };
 		1F62F32D1230732F0008CD42 /* DRSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSession.h; sourceTree = "<group>"; };
 		1F62F32E1230732F0008CD42 /* DRSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSession.m; sourceTree = "<group>"; };
-		1F72E3F7124EC1930081021B /* DenonRemoteLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DenonRemoteLib.h; sourceTree = "<group>"; };
-		1F90AE86124E2A530050F566 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
-		1F90AE87124E2A530050F566 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		1F751CB015B35CD600B2B7ED /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		1FA613BE1232A6F400A08A5B /* DRInputSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRInputSource.h; sourceTree = "<group>"; };
 		1FA613BF1232A6F400A08A5B /* DRInputSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRInputSource.m; sourceTree = "<group>"; };
-		1FA8E41D124FA0B900FE4432 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = en.lproj/ConfigView.xib; sourceTree = "<group>"; };
-		1FCBE9AE124F97F200F73E79 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = en.lproj/MainZoneView.xib; sourceTree = "<group>"; };
-		1FCBE9B6124F9F7600F73E79 /* ConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigController.h; sourceTree = "<group>"; };
-		1FCBE9B7124F9F7600F73E79 /* ConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigController.m; sourceTree = "<group>"; };
-		1FD8CF2013DB2217002C40D7 /* DenonRemoteLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DenonRemoteLib.h; sourceTree = "<group>"; };
-		1FED4585124F8DE800B787A5 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
-		1FED4586124F8DE800B787A5 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
-		1FED4589124F8E5300B787A5 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		1FC1014315B2007F007F34E8 /* ConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigController.h; sourceTree = "<group>"; };
+		1FC1014415B2007F007F34E8 /* ConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigController.m; sourceTree = "<group>"; };
+		1FC1014515B2007F007F34E8 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		1FC1014615B2007F007F34E8 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		1FC1014715B2007F007F34E8 /* MainZoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainZoneController.h; sourceTree = "<group>"; };
+		1FC1014815B2007F007F34E8 /* MainZoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainZoneController.m; sourceTree = "<group>"; };
+		1FC1014915B2007F007F34E8 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		1FC1014A15B2007F007F34E8 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		1FC1014B15B2007F007F34E8 /* ReceiverConnectionChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiverConnectionChecker.h; sourceTree = "<group>"; };
+		1FC1014C15B2007F007F34E8 /* ReceiverConnectionChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverConnectionChecker.m; sourceTree = "<group>"; };
+		1FC1014D15B2007F007F34E8 /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
+		1FC1014E15B2007F007F34E8 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
+		1FC1015615B200A5007F34E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ConfigView.xib; sourceTree = "<group>"; };
+		1FC1015815B200A5007F34E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		1FC1015A15B200A5007F34E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainZoneView.xib; sourceTree = "<group>"; };
+		1FC1015C15B200A5007F34E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
+		1FC1016615B2015B007F34E8 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		1FC1016715B2015B007F34E8 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		1FC1016815B2015B007F34E8 /* DenonRemoteLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DenonRemoteLib.h; sourceTree = "<group>"; };
 		1FEF92DD12306F730069D6BE /* Denon Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Denon Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FEF92E012306F730069D6BE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1FEF92E212306F730069D6BE /* DenonRemote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DenonRemote-Info.plist"; sourceTree = "<group>"; };
@@ -91,10 +90,9 @@
 		1F62F3271230732F0008CD42 /* DenonRemoteLib */ = {
 			isa = PBXGroup;
 			children = (
-				1F72E3F7124EC1930081021B /* DenonRemoteLib.h */,
-				1F43FB521240295A00CE339B /* AsyncSocket.h */,
-				1FD8CF2013DB2217002C40D7 /* DenonRemoteLib.h */,
-				1F43FB531240295A00CE339B /* AsyncSocket.m */,
+				1FC1016615B2015B007F34E8 /* AsyncSocket.h */,
+				1FC1016715B2015B007F34E8 /* AsyncSocket.m */,
+				1FC1016815B2015B007F34E8 /* DenonRemoteLib.h */,
 				1F62F3281230732F0008CD42 /* DRDebuggingMacros.h */,
 				1F62F3291230732F0008CD42 /* DREvent.h */,
 				1F62F32A1230732F0008CD42 /* DREvent.m */,
@@ -124,18 +122,18 @@
 		1FEF92D512306F720069D6BE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1F3F952A124FE206006D9AC9 /* ReceiverConnectionChecker.h */,
-				1F3F952B124FE207006D9AC9 /* ReceiverConnectionChecker.m */,
-				1FCBE9B6124F9F7600F73E79 /* ConfigController.h */,
-				1FCBE9B7124F9F7600F73E79 /* ConfigController.m */,
-				1FED4585124F8DE800B787A5 /* MainWindowController.h */,
-				1FED4586124F8DE800B787A5 /* MainWindowController.m */,
-				1F1AE7B0124E828D0031CC7C /* SessionManager.h */,
-				1F1AE7B1124E828D0031CC7C /* SessionManager.m */,
-				1F1AE7A7124E67070031CC7C /* MainZoneController.h */,
-				1F1AE7A8124E67070031CC7C /* MainZoneController.m */,
-				1F90AE86124E2A530050F566 /* PreferencesController.h */,
-				1F90AE87124E2A530050F566 /* PreferencesController.m */,
+				1FC1014315B2007F007F34E8 /* ConfigController.h */,
+				1FC1014415B2007F007F34E8 /* ConfigController.m */,
+				1FC1014515B2007F007F34E8 /* MainWindowController.h */,
+				1FC1014615B2007F007F34E8 /* MainWindowController.m */,
+				1FC1014715B2007F007F34E8 /* MainZoneController.h */,
+				1FC1014815B2007F007F34E8 /* MainZoneController.m */,
+				1FC1014915B2007F007F34E8 /* PreferencesController.h */,
+				1FC1014A15B2007F007F34E8 /* PreferencesController.m */,
+				1FC1014B15B2007F007F34E8 /* ReceiverConnectionChecker.h */,
+				1FC1014C15B2007F007F34E8 /* ReceiverConnectionChecker.m */,
+				1FC1014D15B2007F007F34E8 /* SessionManager.h */,
+				1FC1014E15B2007F007F34E8 /* SessionManager.m */,
 				1FEF92EF12306F730069D6BE /* DenonRemoteAppDelegate.h */,
 				1FEF92F012306F730069D6BE /* DenonRemoteAppDelegate.m */,
 			);
@@ -154,15 +152,15 @@
 		1FEF92D712306F720069D6BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1FA8E41C124FA0B900FE4432 /* ConfigView.xib */,
-				1FCBE9AD124F97F200F73E79 /* MainZoneView.xib */,
-				1FEF92E912306F730069D6BE /* MainMenu.xib */,
-				1FED4588124F8E5300B787A5 /* MainWindow.xib */,
-				1F5BD074124590E600B65915 /* PreferencesWindow.xib */,
-				1F29BEFF1246324000664F7A /* Defaults.plist */,
+				1F751CB015B35CD600B2B7ED /* Defaults.plist */,
+				1FC1015515B200A5007F34E8 /* ConfigView.xib */,
+				1FC1015715B200A5007F34E8 /* MainWindow.xib */,
+				1FC1015915B200A5007F34E8 /* MainZoneView.xib */,
+				1FC1015B15B200A5007F34E8 /* PreferencesWindow.xib */,
 				1F62F324123071660008CD42 /* DenonRemote.icns */,
 				1FEF92E212306F730069D6BE /* DenonRemote-Info.plist */,
 				1FEF92E412306F730069D6BE /* InfoPlist.strings */,
+				1FEF92E912306F730069D6BE /* MainMenu.xib */,
 				1FEF92EC12306F730069D6BE /* Credits.rtf */,
 			);
 			name = Resources;
@@ -210,7 +208,7 @@
 		1FEF92D012306F720069D6BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Jeff Hutchison";
 			};
 			buildConfigurationList = 1FEF92D312306F720069D6BE /* Build configuration list for PBXProject "DenonRemote" */;
@@ -237,13 +235,13 @@
 			files = (
 				1FEF92E612306F730069D6BE /* InfoPlist.strings in Resources */,
 				1FEF92EB12306F730069D6BE /* MainMenu.xib in Resources */,
-				1FCBE9AF124F988300F73E79 /* MainZoneView.xib in Resources */,
-				1F5BD07D1245978D00B65915 /* PreferencesWindow.xib in Resources */,
-				1FA8E41E124FA0CA00FE4432 /* ConfigView.xib in Resources */,
 				1FEF92EE12306F730069D6BE /* Credits.rtf in Resources */,
 				1F62F325123071660008CD42 /* DenonRemote.icns in Resources */,
-				1F29BF001246324000664F7A /* Defaults.plist in Resources */,
-				1FED458A124F8E5300B787A5 /* MainWindow.xib in Resources */,
+				1FC1015D15B200A5007F34E8 /* ConfigView.xib in Resources */,
+				1FC1015E15B200A5007F34E8 /* MainWindow.xib in Resources */,
+				1FC1015F15B200A5007F34E8 /* MainZoneView.xib in Resources */,
+				1FC1016015B200A5007F34E8 /* PreferencesWindow.xib in Resources */,
+				1F751CB115B35CD600B2B7ED /* Defaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,49 +258,49 @@
 				1F62F3321230732F0008CD42 /* DRSession+Commands.m in Sources */,
 				1F62F3331230732F0008CD42 /* DRSession.m in Sources */,
 				1FA613C01232A6F400A08A5B /* DRInputSource.m in Sources */,
-				1F43FB541240295A00CE339B /* AsyncSocket.m in Sources */,
-				1F90AE88124E2A530050F566 /* PreferencesController.m in Sources */,
-				1F1AE7AA124E67070031CC7C /* MainZoneController.m in Sources */,
-				1F1AE7B2124E828D0031CC7C /* SessionManager.m in Sources */,
-				1FED4587124F8DE800B787A5 /* MainWindowController.m in Sources */,
-				1FCBE9B9124F9F7600F73E79 /* ConfigController.m in Sources */,
-				1F3F952C124FE207006D9AC9 /* ReceiverConnectionChecker.m in Sources */,
+				1FC1014F15B2007F007F34E8 /* ConfigController.m in Sources */,
+				1FC1015015B2007F007F34E8 /* MainWindowController.m in Sources */,
+				1FC1015115B2007F007F34E8 /* MainZoneController.m in Sources */,
+				1FC1015215B2007F007F34E8 /* PreferencesController.m in Sources */,
+				1FC1015315B2007F007F34E8 /* ReceiverConnectionChecker.m in Sources */,
+				1FC1015415B2007F007F34E8 /* SessionManager.m in Sources */,
+				1FC1016915B2015B007F34E8 /* AsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1F5BD074124590E600B65915 /* PreferencesWindow.xib */ = {
+		1FC1015515B200A5007F34E8 /* ConfigView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1F5BD075124590E600B65915 /* en */,
-			);
-			name = PreferencesWindow.xib;
-			sourceTree = "<group>";
-		};
-		1FA8E41C124FA0B900FE4432 /* ConfigView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1FA8E41D124FA0B900FE4432 /* en */,
+				1FC1015615B200A5007F34E8 /* en */,
 			);
 			name = ConfigView.xib;
 			sourceTree = "<group>";
 		};
-		1FCBE9AD124F97F200F73E79 /* MainZoneView.xib */ = {
+		1FC1015715B200A5007F34E8 /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1FCBE9AE124F97F200F73E79 /* en */,
+				1FC1015815B200A5007F34E8 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		1FC1015915B200A5007F34E8 /* MainZoneView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FC1015A15B200A5007F34E8 /* en */,
 			);
 			name = MainZoneView.xib;
 			sourceTree = "<group>";
 		};
-		1FED4588124F8E5300B787A5 /* MainWindow.xib */ = {
+		1FC1015B15B200A5007F34E8 /* PreferencesWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1FED4589124F8E5300B787A5 /* MainWindow.xib */,
+				1FC1015C15B200A5007F34E8 /* en */,
 			);
-			name = MainWindow.xib;
+			name = PreferencesWindow.xib;
 			sourceTree = "<group>";
 		};
 		1FEF92E412306F730069D6BE /* InfoPlist.strings */ = {
@@ -336,7 +334,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CURRENT_PROJECT_VERSION = 8;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -345,7 +344,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -354,13 +352,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CURRENT_PROJECT_VERSION = 8;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -369,10 +367,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DenonRemote_Prefix.pch;
@@ -388,10 +388,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DenonRemote_Prefix.pch;

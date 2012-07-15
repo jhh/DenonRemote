@@ -20,8 +20,8 @@
 @interface PreferencesController ()
 
 // read/write variants of public properties
-@property(nonatomic, assign, readwrite) NSImage * receiverStatusImage;
-@property(nonatomic, assign, readwrite) NSString * receiverStatusMessage;
+@property(nonatomic, readwrite) NSImage * receiverStatusImage;
+@property(nonatomic, readwrite) NSString * receiverStatusMessage;
 
 // forward declarations
 

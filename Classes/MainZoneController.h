@@ -51,13 +51,13 @@
 // Properties
 
 
-@property (nonatomic, assign, readonly, getter=isInitializing) BOOL initializing;
-@property (nonatomic, assign, readonly, getter=isActive) BOOL active;
-@property (nonatomic, assign, readonly, getter=isMute) BOOL   mute;
-@property (nonatomic, copy,   readonly) NSString *            activeStandbyButtonTitle;
-@property (nonatomic, copy,   readonly) NSString *            muteUnmuteButtonTitle;
-@property (nonatomic, copy,   readonly) NSArray *             inputSourceNames;
-@property (nonatomic, assign, readwrite) NSUInteger           selectedInputSourceIndex;
-@property (nonatomic, assign, readwrite) float                masterVolumeDb;
+@property (nonatomic, readonly, getter=isInitializing) BOOL initializing;
+@property (nonatomic, readonly, getter=isActive) BOOL       active;
+@property (nonatomic, readonly, getter=isMute) BOOL         mute;
+@property (nonatomic, copy,   readonly) NSString *          activeStandbyButtonTitle;
+@property (nonatomic, copy,   readonly) NSString *          muteUnmuteButtonTitle;
+@property (nonatomic, copy,   readonly) NSArray *           inputSourceNames;
+@property (nonatomic, readwrite) NSUInteger                 selectedInputSourceIndex;
+@property (nonatomic, readwrite) float                      masterVolumeDb;
 
 @end

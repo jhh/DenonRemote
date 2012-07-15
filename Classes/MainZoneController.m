@@ -24,11 +24,11 @@
 @interface MainZoneController ()
 
 // read/write variants of public properties
-@property (nonatomic, assign, readwrite, getter=isInitializing) BOOL initializing;
-@property (nonatomic, assign, readwrite, getter=isActive) BOOL active;
-@property (nonatomic, assign, readwrite, getter=isMute) BOOL   mute;
+@property (nonatomic, readwrite, getter=isInitializing) BOOL initializing;
+@property (nonatomic, readwrite, getter=isActive) BOOL active;
+@property (nonatomic, readwrite, getter=isMute) BOOL   mute;
 @property (nonatomic, copy,   readwrite) NSArray * inputSourceNames;
-@property (nonatomic, assign, readwrite) NSMutableArray * inputSources;
+@property (nonatomic, readwrite) NSMutableArray * inputSources;
 
 // forward declarations
 - (void) initializeInputSourceUsage:(DREvent *)event;

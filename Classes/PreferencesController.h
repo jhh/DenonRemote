@@ -33,7 +33,7 @@
 // Properties
 
 @property(nonatomic, copy, readwrite) NSString * receiverAddress;
-@property(nonatomic, assign, readonly) NSImage * receiverStatusImage;
-@property(nonatomic, assign, readonly) NSString * receiverStatusMessage;
+@property(nonatomic, readonly) NSImage * receiverStatusImage;
+@property(nonatomic, readonly) NSString * receiverStatusMessage;
 
 @end

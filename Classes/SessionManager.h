@@ -34,8 +34,8 @@ extern NSString * const DREventNotification;
 
 // Properties
 
-@property (nonatomic, assign, readonly) DRSession * session;
-@property (nonatomic, assign, readonly) DREvent * event;
-@property (nonatomic, assign, readonly) NSUserDefaults * defaults;
+@property (nonatomic, readonly) DRSession * session;
+@property (nonatomic, readonly) DREvent * event;
+@property (nonatomic, readonly) NSUserDefaults * defaults;
 
 @end

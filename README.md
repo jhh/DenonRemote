@@ -1,5 +1,7 @@
 # DenonRemote
 
+**NOTE:** This project has been replaced by [AVRConnect](https://github.com/jhh/AVRConnect) and is no longer under active development.
+
 A Mac OSX application that controls a Denon AVR-4308CI receiver over the network.
 
 ## Building DenonRemote
